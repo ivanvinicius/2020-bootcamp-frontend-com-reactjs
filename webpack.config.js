@@ -1,7 +1,9 @@
 const path = require('path');
 
 module.exports = {
+  // entrada da aplicação no SRC
   entry: path.resolve(__dirname, 'src', 'index.js'),
+  // arquivos transpilados na pasta PUBLiC 
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'
@@ -14,6 +16,7 @@ module.exports = {
 
   module: {
     rules: [
+      // arquivos js
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -21,6 +24,7 @@ module.exports = {
           loader: 'babel-loader',
         }
       },
+      // arquivos css
       {
         test: /\.css$/,
         exclude: /node_modules/,
@@ -29,6 +33,7 @@ module.exports = {
           { loader: 'css-loader' }
         ]
       },
+      // imagens
       {
         test: /.*\.(gif|png|jpeg|jpg)$/i,
         use: { 

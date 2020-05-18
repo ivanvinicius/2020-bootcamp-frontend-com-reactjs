@@ -1,7 +1,7 @@
 {
   "name": "2020-bootcamp-frontend-com-reactjs",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": "https://github.com/ivanvinicius/2020-bootcamp-frontend-com-reactjs.git",
   "author": "ivanvinicius <ivanvinicius88@gmail.com>",
   "license": "MIT",
@@ -11,12 +11,19 @@
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
   }
 }

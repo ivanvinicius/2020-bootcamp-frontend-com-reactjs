@@ -7,10 +7,7 @@ module.exports = {
     filename: 'bundle.js'
   },
 
-  /**
-   * Live Reload
-   */
-
+  /** Live Reload */
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
   },

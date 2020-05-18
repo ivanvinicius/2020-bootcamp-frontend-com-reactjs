@@ -14,7 +14,15 @@ export default function App() {
     });
   }, []);
 
-  function handleAddProject() {}
+  async function handleAddProject() {
+    const newProject = { title: `Novo Projeto ${Date.now()}`, owner: "Ivan" };
+
+    const response = await api.post('projects', newProject);
+
+    const createdProject = response.data;
+
+    setProjects([...projects, createdProject]);
+  }
 
   return (
     <>
